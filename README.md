@@ -57,7 +57,7 @@ README.mdを編集して、「【ここにConsoleログを記入】」の部分�
 - ログをコピーして、下記に貼り付ける
 
 ```
-1
+55
 10
 ```
 
@@ -71,7 +71,34 @@ README.mdを編集して、「【ここにConsoleログを記入】」の部分�
 - （p.89 Columnは記入不要（以下も同様））
 
 ```
-【ここにConsoleログを記入】
+total;
+VM269:1 Uncaught ReferenceError: total is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM269:1
+sum(2,5);
+undefined
+var hoge =5;
+function testScope() {
+window.alert(hoge);
+}
+undefined
+testScope();
+undefined
+function sum(rangeFrom,rangeTo) {
+    let total =0;
+    for (let counter = rangeFrom; counter <= rangeTo; counter++) {
+        total += counter;
+    }
+    window.alert(counter);
+}
+
+undefined
+sum(1,10);
+VM319:6 Uncaught ReferenceError: counter is not defined
+    at sum (<anonymous>:6:18)
+    at <anonymous>:1:1
+sum @ VM319:6
+(anonymous) @ VM329:1
 ```
 
 ### 4-2-4 返り値 (p.88 中央)
